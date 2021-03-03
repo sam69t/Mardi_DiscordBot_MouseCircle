@@ -1,5 +1,6 @@
 const { app, BrowserWindow } = require("electron");
 
+let DISCORD_TOKEN = "ADD_YOUR_OWN_TOKEN"; 
 let win = null;
 
 function createWindow() {
@@ -20,7 +21,7 @@ function createWindow() {
 function initBot() {
   // On veut seulement la class dans le fichier discordBot
   const DiscordBot = require("./DiscordBot.js").DiscordBot;
-  new DiscordBot("ODE1ODYyODIyNjM3Nzk3Mzg4.YDyldg.7aLyKZLMoJiSpk4etYc_gMD44xM");
+  new DiscordBot(DISCORD_TOKEN);
 }
 
 // Pour pointer directement sur l'application quand on lance la commande
